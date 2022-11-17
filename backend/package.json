@@ -1,0 +1,32 @@
+{
+  "name": "boilerplate-backend",
+  "version": "1.0.0",
+  "description": "boilerplate-backend",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "npm run-script build && NODE_ENV=DEV node ./dist/index.js",
+    "debug": "npm run-script build && NODE_ENV=DEV node --inspect ./dist/index.js",
+    "pro": "npm run-script build && NODE_ENV=PRO node ./dist/index.js",
+    "pre": "npm run-script build && NODE_ENV=PRE node ./dist/index.js",
+    "build": "rm -rf dist/* && tsc -d",
+    "serve": "tsc -d && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.1",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/node": "^15.12.2",
+    "@types/shelljs": "^0.8.8",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "formidable": "^2.0.1",
+    "request": "^2.88.2",
+    "rxjs": "^7.1.0",
+    "typescript": "^4.3.2"
+  }
+}
