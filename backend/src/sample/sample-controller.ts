@@ -9,7 +9,7 @@ export class SampleController{
     sample(req:Request, res:Response){
 
         let result = sampleService.sample();
-        res.status(200).send({response:"result"});
+        res.status(200).send({response:"result is the packs"});
 
     }
 
