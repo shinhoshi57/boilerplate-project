@@ -14,6 +14,18 @@ export class SampleController{
     }
 
 
+    sampleCall(req:Request, res:Response){
+
+        sampleService.sample_async().subscribe((result:any)=>{
+
+
+            res.status(200).send(result);
+
+
+        });
+    }
+
+
 
 }
 

@@ -9,6 +9,7 @@ export class SampleRoutes{
     public routes(app:Application):void{
 
             app.route("/api/sample").get(sampleController.sample);
+            app.route("/api/sample_async").get(sampleController.sampleCall);
 
     }
 
