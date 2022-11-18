@@ -1,5 +1,6 @@
 import { sampleService } from "./sample-service";
 import { Request, Response } from "express";
+import { Aliment } from "../model/user.model";
 
 
 
@@ -16,7 +17,7 @@ export class SampleController{
 
     sampleCall(req:Request, res:Response){
 
-        sampleService.sample_async().subscribe((result:any)=>{
+        sampleService.sample_async().subscribe((result:Aliment)=>{
 
 
             res.status(200).send(result);
