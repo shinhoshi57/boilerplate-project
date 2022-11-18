@@ -20,15 +20,19 @@ export class SampleService {
         return new Observable(observer => {
 
             httpService.doGet("https://sarrado-test.free.beeceptor.com/api/sample").subscribe({
-                next: (aliments) => {
-                    let result: Aliment = new Aliment();
+                next: (result) => {
 
-                    for (let aliment of aliments) {
-                        if (aliment.type = "fruit")
-                            result = aliment;
-                    }
+                    let aliments:Array<Aliment> = result as Array<Aliment>;
+                    let aliment: Aliment = new Aliment();
 
-                    observer.next(result);
+                    //for (let aliment of aliments) {
+                    //    if (aliment.type = "fruit")
+                    //        result = aliment;
+                    //}
+
+                    aliments.forEach(elem=> {if(elem.type=="fruit")aliment=elem});
+
+                    observer.next(aliment);
                     observer.complete();
                 },
                 error: (error) => {

@@ -8,7 +8,7 @@ import { SampleService } from './services/sample.service';
 })
 export class AppComponent implements OnInit{
   title = 'frontend';
-  value ="empty";
+  value = "empty";
 
   constructor(private sampleService:SampleService){}
 

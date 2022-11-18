@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpService } from './services/http.service';
 import { SampleService } from './services/sample.service';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +20,6 @@ import { SampleService } from './services/sample.service';
 
   ],
   providers: [HttpService, SampleService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,TopBarComponent]
 })
 export class AppModule { }
