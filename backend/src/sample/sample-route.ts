@@ -10,8 +10,8 @@ export class SampleRoutes{
 
             app.route("/api/sample").get(sampleController.sample);
             app.route("/api/sample_async").get(sampleController.sampleCall);
-
-    }
+            app.route("/api/insert").get(sampleController.insert);
+    }       
 
 
 

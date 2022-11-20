@@ -1,6 +1,6 @@
 import { sampleService } from "./sample-service";
 import { Request, Response } from "express";
-import { Aliment } from "../model/user.model";
+import { Aliment } from "../datasources/entity/aliment.entity";
 
 
 
@@ -24,6 +24,13 @@ export class SampleController{
 
 
         });
+    }
+
+    insert(req:Request, res:Response){
+
+        sampleService.create();
+
+        res.status(200).send("perfect");
     }
 
 

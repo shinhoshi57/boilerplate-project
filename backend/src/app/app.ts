@@ -2,6 +2,7 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import { sampleRoutes } from "../sample/sample-route";
+import { testDatasource } from "../datasources/test.datasource";
 
 
 class App {
@@ -30,6 +31,14 @@ class App {
         this.app.use(bodyParser.urlencoded({ extended: false }));
 
         sampleRoutes.routes(this.app);
+        this.initializeDb();
+    }
+
+    private async initializeDb(){
+
+        await testDatasource.initalize();
+
+        
 
     }
 }

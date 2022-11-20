@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
     "baseUrl": "src",
     "paths": {
       "@dp/model": [
@@ -12,10 +13,11 @@
         "node_modules/*"
       ]
     },
-    "target": "es6",
+    "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
     "outDir": "dist",
     "sourceMap": true,
     "skipLibCheck": true
