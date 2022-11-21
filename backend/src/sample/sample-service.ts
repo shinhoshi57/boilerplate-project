@@ -2,6 +2,7 @@ import { Aliment } from "../datasources/entity/aliment.entity";
 import { Observable } from "rxjs";
 import { httpService } from "../services/http.service";
 import { testDatasource } from "../datasources/test.datasource";
+import { sampleRepository } from "./sample-repository";
 
 
 
@@ -19,14 +20,14 @@ export class SampleService {
     create(){
 
 
-        const repo= testDatasource.getRepository(Aliment);
+      
 
         let ali:Aliment=new Aliment();
 
         ali.name="tomato";
         ali.type="fruit";
 
-        repo.save(ali);
+        sampleRepository.insert(ali);
 
     }
 

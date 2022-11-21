@@ -1,15 +1,15 @@
 module.exports = {
-    testEnvironment: 'node',
-    "roots": [
-        "<rootDir>/src"
-    ],
-    transform: {
-        '^.+\\.tsx?$': 'ts-jest',
-      },
-      testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-      moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-      moduleNameMapper:{
-        '@common': '<rootDir>/src/common/index.ts',
-        '@config': '<rootDir>/src/config/index.ts',
-      }
-  };
+  testEnvironment: 'node',
+  "roots": [
+      "./src"
+  ],
+  transform: {
+      '^.+\\.tsx?$': 'ts-jest',
+    },
+    testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+    moduleNameMapper:{
+      '@backend': '<rootDir>/src/index.ts',
+      '@frontend':'<rootDir>/src/index.ts'
+    }
+};

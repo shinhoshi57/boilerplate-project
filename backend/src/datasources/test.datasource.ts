@@ -25,7 +25,10 @@ export class TestDatasouce{
         return this.dataSource.initialize();
     }
 
-    getRepository(elem:EntityTarget<ObjectLiteral>):Repository<ObjectLiteral>{
+    async getRepository(elem:EntityTarget<ObjectLiteral>):Promise<Repository<ObjectLiteral>>{
+
+        if(!this.dataSource.isInitialized)
+            await this.dataSource.initialize();
 
         return this.dataSource.getRepository(elem);
     }
